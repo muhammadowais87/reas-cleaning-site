@@ -1068,7 +1068,7 @@ em,
   position: absolute;
   inset: 0;
   z-index: 2;
-  background: var(--sand);
+  background: var(--paper);
   transform-origin: right;
   transform: scaleX(1);
   transition: transform 0.9s var(--ease) calc(var(--rd, 0ms) + 90ms);

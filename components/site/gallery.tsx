@@ -38,7 +38,7 @@ export function Gallery() {
   const active = openIndex === null ? null : GALLERY.items[openIndex]
 
   return (
-    <section className="section is-sand" id="gallery">
+    <section className="section is-paper" id="gallery">
       <div className="container">
         <div className="gallery__head">
           <div>
