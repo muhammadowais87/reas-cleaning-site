@@ -22,6 +22,46 @@ const DESCRIPTION =
 
 const TITLE = "Rea's Cleaning Services | Professional Cleaning Services in Atlanta"
 
+// Structured data for search engines / Google Business Profile matching.
+// Not rendered as visible page content.
+const BUSINESS_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "HousekeepingService",
+  name: "Rea's Cleaning Services",
+  image: `${SITE_URL}/opengraph-image.png`,
+  url: SITE_URL,
+  telephone: "+14049342853",
+  email: "emilie0874@gmail.com",
+  priceRange: "$$",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "126 Terrace Drive NE, Unit C",
+    addressLocality: "Atlanta",
+    addressRegion: "GA",
+    postalCode: "30305",
+    addressCountry: "US",
+  },
+  areaServed: "Atlanta, GA",
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday",
+    ],
+    opens: "09:00",
+    closes: "21:00",
+  },
+  sameAs: [
+    "https://www.facebook.com/reacleaningservices/about/",
+    "https://share.google/IveqZNX0Rl2SB9qlH",
+  ],
+}
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: TITLE,
@@ -56,6 +96,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${fraunces.variable} ${archivo.variable}`}>
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(BUSINESS_SCHEMA) }}
+        />
         {children}
         {process.env.NODE_ENV === "production" && <Analytics />}
       </body>

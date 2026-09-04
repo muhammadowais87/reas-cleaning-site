@@ -28,6 +28,7 @@ export function Services() {
             return (
               <Reveal
                 as="article"
+                id={service.slug}
                 className="svc"
                 key={service.title}
                 x={fromLeft ? -64 : 64}

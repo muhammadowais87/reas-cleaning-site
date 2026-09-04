@@ -19,6 +19,7 @@ export const CONTACT = {
   hoursFooter: "Open daily, 9 AM – 9 PM",
   area: "Atlanta, GA & surrounding areas",
   facebook: "https://www.facebook.com/reacleaningservices/about/",
+  gmb: "https://share.google/IveqZNX0Rl2SB9qlH",
   whatsapp:
     "https://wa.me/14049342853?text=Hi%20Rea%27s%20Cleaning%20Services!%20I%27d%20like%20to%20ask%20about%20a%20cleaning%20quote.",
 } as const
@@ -43,11 +44,14 @@ export const ABOUT = {
     "For more than 10 years, Rea's Cleaning Services has helped homes, offices, Airbnb properties, and commercial spaces stay clean and welcoming. Our professional approach is built on attention to detail, dependable service, and genuine care for every customer.",
   points: ["Experienced team", "Detail-focused cleaning", "Reliable service"],
   badge: { value: "10+", label: "Years Experience" },
+  founder: "Reya",
+  founderTitle: "Founder",
 } as const
 
 export const SERVICES = [
   {
     n: "01",
+    slug: "commercial-office-cleaning",
     title: "Commercial Office Cleaning",
     copy:
       "Keep your workplace clean, polished, and welcoming with dependable office cleaning tailored to your business.",
@@ -55,6 +59,7 @@ export const SERVICES = [
   },
   {
     n: "02",
+    slug: "airbnb",
     title: "Airbnb",
     copy:
       "Get your Airbnb guest-ready with detailed turnover cleaning that leaves every space fresh, spotless, and inviting.",
@@ -62,6 +67,7 @@ export const SERVICES = [
   },
   {
     n: "03",
+    slug: "moving",
     title: "Moving",
     copy:
       "Make moving easier with thorough cleaning for move-in or move-out, helping you start fresh in a clean space.",
@@ -69,6 +75,7 @@ export const SERVICES = [
   },
   {
     n: "04",
+    slug: "clearing-out",
     title: "Clearing Out",
     copy:
       "Need a space cleared and cleaned? We help refresh and prepare areas after decluttering, cleanouts, and transitions.",
@@ -76,6 +83,7 @@ export const SERVICES = [
   },
   {
     n: "05",
+    slug: "commercial-services",
     title: "Commercial Services",
     copy:
       "Professional cleaning solutions designed to help commercial spaces maintain a clean, organized, and professional environment.",
@@ -167,7 +175,7 @@ export const FOOTER = {
   columns: [
     {
       title: "Services",
-      links: SERVICES.map((s) => ({ label: s.title, href: "#contact" })),
+      links: SERVICES.map((s) => ({ label: s.title, href: `#${s.slug}` })),
     },
     {
       title: "Company",
@@ -183,7 +191,7 @@ export const FOOTER = {
     { label: "Phone", value: CONTACT.phone, href: CONTACT.phoneHref },
     { label: "Email", value: CONTACT.email, href: CONTACT.emailHref },
     { label: "Hours", value: CONTACT.hoursFooter, href: null },
-    { label: "Location", value: CONTACT.area, href: null },
+    { label: "Location", value: CONTACT.area, href: CONTACT.gmb },
   ],
   copyright: "© 2026 Rea's Cleaning Services. All rights reserved.",
   copyrightNote: "10+ years of trusted cleaning in Atlanta.",

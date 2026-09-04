@@ -46,6 +46,10 @@ export function About() {
               </li>
             ))}
           </Reveal>
+
+          <Reveal as="p" className="about__founder" delay={200}>
+            &mdash; {ABOUT.founder}, <span>{ABOUT.founderTitle}</span>
+          </Reveal>
         </div>
       </div>
     </section>

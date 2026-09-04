@@ -68,7 +68,7 @@ export function Contact() {
 
             <form className="form-grid" onSubmit={handleSubmit}>
               <div className="field">
-                <input id="c-name" name="name" type="text" required placeholder="Jane Doe" />
+                <input id="c-name" name="name" type="text" required placeholder="Your full name" />
                 <label htmlFor="c-name">Full name</label>
               </div>
               <div className="field">
@@ -76,7 +76,7 @@ export function Contact() {
                 <label htmlFor="c-phone">Phone number</label>
               </div>
               <div className="field">
-                <input id="c-email" name="email" type="email" required placeholder="jane@email.com" />
+                <input id="c-email" name="email" type="email" required placeholder="you@email.com" />
                 <label htmlFor="c-email">Email</label>
               </div>
               <div className="field">

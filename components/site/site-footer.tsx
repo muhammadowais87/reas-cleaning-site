@@ -15,15 +15,26 @@ export function SiteFooter() {
               <b>{FOOTER.name}</b>
             </span>
             <p>{FOOTER.tagline}</p>
-            <a
-              className="footer__social"
-              href={CONTACT.facebook}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span aria-hidden="true">f</span>
-              Facebook
-            </a>
+            <div className="footer__socials">
+              <a
+                className="footer__social"
+                href={CONTACT.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span aria-hidden="true">f</span>
+                Facebook
+              </a>
+              <a
+                className="footer__social"
+                href={CONTACT.gmb}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span aria-hidden="true">G</span>
+                Google
+              </a>
+            </div>
           </Reveal>
 
           {FOOTER.columns.map((col, i) => (
@@ -51,7 +62,13 @@ export function SiteFooter() {
                 <li key={item.label}>
                   <span>{item.label}</span>
                   {item.href ? (
-                    <a href={item.href}>{item.value}</a>
+                    item.href.startsWith("http") ? (
+                      <a href={item.href} target="_blank" rel="noopener noreferrer">
+                        {item.value}
+                      </a>
+                    ) : (
+                      <a href={item.href}>{item.value}</a>
+                    )
                   ) : (
                     item.value
                   )}
@@ -69,6 +86,14 @@ export function SiteFooter() {
           <div className="footer__bottom-note">
             <span>{FOOTER.copyright}</span>
             <span>{FOOTER.copyrightNote}</span>
+            <a
+              className="footer__credit"
+              href="https://www.rizingmetrics.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Powered by Rizing Metrics
+            </a>
           </div>
           <div className="footer__utility">
             {FOOTER.utility.map((item) => (
