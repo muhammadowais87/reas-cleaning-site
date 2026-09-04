@@ -86,14 +86,17 @@ export function SiteFooter() {
           <div className="footer__bottom-note">
             <span>{FOOTER.copyright}</span>
             <span>{FOOTER.copyrightNote}</span>
-            <a
-              className="footer__credit"
-              href="https://www.rizingmetrics.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Powered by Rizing Metrics
-            </a>
+            <span>
+              Powered by{" "}
+              <a
+                className="footer__credit"
+                href="https://www.rizingmetrics.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Rizing Metrics
+              </a>
+            </span>
           </div>
         </div>
       </div>
