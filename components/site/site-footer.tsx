@@ -95,13 +95,6 @@ export function SiteFooter() {
               Powered by Rizing Metrics
             </a>
           </div>
-          <div className="footer__utility">
-            {FOOTER.utility.map((item) => (
-              <a key={item.label} href={item.href}>
-                {item.label}
-              </a>
-            ))}
-          </div>
         </div>
       </div>
     </footer>

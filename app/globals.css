@@ -1758,22 +1758,6 @@ em,
   color: var(--paper);
   border-color: var(--mint);
 }
-.footer__utility {
-  display: flex;
-  gap: 1.25rem;
-}
-.footer__utility a {
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--paper-74);
-  padding-bottom: 0.2rem;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.3s;
-}
-.footer__utility a:hover {
-  border-color: var(--mint);
-}
-
 @media (max-width: 900px) {
   .footer__top {
     grid-template-columns: 1fr 1fr;

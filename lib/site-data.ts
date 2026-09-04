@@ -195,9 +195,4 @@ export const FOOTER = {
   ],
   copyright: "© 2026 Rea's Cleaning Services. All rights reserved.",
   copyrightNote: "10+ years of trusted cleaning in Atlanta.",
-  utility: [
-    { label: "Call", href: CONTACT.phoneHref },
-    { label: "Text", href: CONTACT.smsHref },
-    { label: "Quote", href: "#contact" },
-  ],
 } as const
